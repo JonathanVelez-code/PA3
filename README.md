@@ -9,3 +9,4 @@ javac fileName.java
 ```bash
 java fileName 
 ```
+4. Press enter then a printable result will appear in the command line.

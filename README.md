@@ -11,7 +11,7 @@ java fileName
 ```
 4. Press enter then a printable result will appear in the command line.
 
-#The Birthday Presents Party
+# The Birthday Presents Party
 ## Proof of Correctness
 
 
@@ -19,7 +19,7 @@ java fileName
 
 ## Efficiency
 
-#Atmospheric Temperature Reading Module
+# Atmospheric Temperature Reading Module
 ## Proof of Correctness
 
 ## Experimental Evaluation

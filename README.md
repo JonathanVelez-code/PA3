@@ -23,9 +23,9 @@ I was getting two different types of runtime when running on the command line vs
 
 # Atmospheric Temperature Reading Module
 ## Proof of Correctness
-8 temperature sensors, each generating readings every minute over a period of one hour. the program creates a list of synchronized lists to store the temperature readings from each sensor. Each synchronized list ensures that the readings are accessed and modified safely from multiple threads.
+8 temperature sensors, each generating readings every minute over a period of one hour. the program creates a list of synchronized lists to store the temperature readings from each sensor. Each synchronized list ensures that the readings are accessed and modified safely from multiple threads. 
 ## Experimental Evaluation
 A better might be to create a separate thread to handle the reporting, and use a thread-safe data structure to communicate the latest temperature readings to the reporting thread. This would eliminate the need to create and start a new thread for each report, and would allow the program to continue collecting temperature readings while the report is being generated. Due to unexpected life issue I wasn't able to implement this idea. :( 
 
 ## Efficiency
-This solution isn't the most efficient because the program waits for each report thread to finish before moving on to the next iteration of the outer loop. However, when running on the command line you should expect 2-3 sec to get the full results from the temperature list.
+This solution isn't the most efficient because the program waits for each report thread to finish before moving on to the next iteration of the outer loop. Also, creates and starts a new thread for each temperature report. However, when running on the command line you should expect 2-3 sec to get the full results from the temperature list.
